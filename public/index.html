@@ -6,9 +6,26 @@
     <title>Interactive CV - Max Day</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #3b82f6;
+            --accent-color: #60a5fa;
+            --text-color: #e2e8f0;
+            --background-color: #0f172a;
+            --dark-background: #1e293b;
+            --card-color: rgba(30, 41, 59, 0.9);
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        body {
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
         .location {
             font-style: italic;
-            color: #666;
+            color: #94a3b8;
             text-align: right;
             margin-top: 10px;
         }
@@ -73,10 +90,24 @@
                 <p>Tested and provided feedback on the Unlogged plugin for IntelliJ IDE.</p>
                 <br>
                 <ul>
-                    <li>I was tasked with daily driving the newly created Unlogged plugin in the IntelJ IDE</li>
+                    <li>I was tasked with daily driving the newly created Unlogged plugin in the IntelliJ IDE</li>
                     <li>I wrote feedback on how the plugin performed in QA environments and how it could be improved</li>
                 </ul>
                 <p class="location">California, United States</p>
+            </div>
+    
+            <div class="card">
+                <span class="date">2024 - Present</span>
+                <h3>Software Developer and Unit Assembler</h3>
+                <h4>Blue Saddle Innovations</h4>
+                <p>Currently working on C and Node.js systems with MQTT clients and Express.js to help automate systems in the field.</p>
+                <br>
+                <ul>
+                    <li>Developing C and Node.js systems for field automation</li>
+                    <li>Working with MQTT clients and Express.js applications</li>
+                    <li>Integrating low-level C code with modern JavaScript frameworks</li>
+                </ul>
+                <p class="location">South Africa</p>
             </div>
         </div>
     </section>
@@ -96,8 +127,7 @@
                     <button class="animated-button" id="semester-2">Semester 2</button>
                     <button class="animated-button" id="semester-3">Semester 3</button>
                     <button class="animated-button" id="semester-4">Semester 4</button>
-                    <button class="animated-button" id="semester-5">Semester 5</button>
-                    <button class="animated-button" id="semester-6">Semester 6</button>
+                
                 </div>
             </div>
             <br>
@@ -181,47 +211,25 @@
 
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Projects (Will add more soon just been busy)</h2>
             
             <div class="card">
                 <div class="project">
-                    <img src="https://via.placeholder.com/800x450" alt="Project 1">
-                    <div>
-                        <h3>Project 1</h3>
-                        <p>Project description goes here.</p>
-                        <br>
-                        <div class="skills">
-                            <span class="skill">C#</span>
-                            <span class="skill">.NET</span>
-                            <span class="skill">Backend</span>
-                        </div>
-                        <br>
-                        <div class="project-links">
-                            <a href="#" target="_blank">View Demo</a>
-                            <a href="https://github.com/Max0xDay" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            
-            <div class="card">
-                <div class="project">
-                    <img src="https://via.placeholder.com/800x450" alt="Project 2">
-                    <div>
-                        <h3>Project 2</h3>
-                        <p>Project description goes here.</p>
-                        <br>
-                        <div class="skills">
-                            <span class="skill">Java</span>
-                            <span class="skill">Backend</span>
-                            <span class="skill">Architecture</span>
-                        </div>
-                        <br>
-                        <div class="project-links">
-                            <a href="#" target="_blank">View Demo</a>
-                            <a href="https://github.com/Max0xDay" target="_blank">GitHub</a>
-                        </div>
+                    <h3>Home Server & Networking Lab</h3>
+                    <p>I have been working on pushing my networking skills by setting up a home server setup with Jellyfin, Sonarr, Radarr content management as well as Cloudflare tunneling on Ubuntu Linux. I have learned a ton of Linux from it and have been loving using only CLI.</p>
+                    <p>I have been very fortunate to receive old hardware from family and friends which I have been using to further my experiments. My home setup includes a Ubiquity mesh network as well as Cisco switches with Cisco ASA 5506-X's for the firewalls and more.</p>
+                    <p>Learning all about networking has been super interesting, and I have also benefited from pushing myself. Setting up systems through console cables and learning how to configure not just home environments but large industrial environments has been a major learning curve. Fun Fact: this is hosted on one of the servers </p>
+                                        
+                    <br>
+                    <div class="skills">
+                        <span class="skill">Ubuntu Linux</span>
+                        <span class="skill">Jellyfin</span>
+                        <span class="skill">Sonarr/Radarr</span>
+                        <span class="skill">Cloudflare</span>
+                        <span class="skill">Cisco ASA</span>
+                        <span class="skill">Ubiquity</span>
+                        <span class="skill">Networking</span>
+                        <span class="skill">CLI</span>
                     </div>
                 </div>
             </div>
@@ -242,43 +250,43 @@
     </section>
 
    
-<section id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
-        
-        <div class="card">
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to contact me using your preferred method.</p>
-            <br>
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
             
-            <h3>Contact Information</h3>
-            <p>Email: <a href="mailto:max28.day@gmail.com">max28.day@gmail.com</a></p>
-            <p>Phone: <a href="tel:0721050898">0721050898</a></p>
-            <br>
-            
-            <h3>Social Media</h3>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/Max-Day/" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 32px; height: 32px;">
-                </a>
-                <a href="https://github.com/Max0xDay" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 32px; height: 32px;">
-                </a>
-                <a href="https://upwork.com/Max-Day/" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Upwork" style="width: 32px; height: 32px;">
-                </a>
+            <div class="card">
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to contact me using your preferred method.</p>
+                <br>
+                
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:max28.day@gmail.com">max28.day@gmail.com</a></p>
+                <p>Phone: <a href="tel:0721050898">0721050898</a></p>
+                <br>
+                
+                <h3>Social Media</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/Max-Day/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 32px; height: 32px;">
+                    </a>
+                    <a href="https://github.com/Max0xDay" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 32px; height: 32px;">
+                    </a>
+                    <a href="https://upwork.com/Max-Day/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Upwork" style="width: 32px; height: 32px;">
+                    </a>
+                </div>
+                <br>
+                
+                <button class="animated-button" id="contact-button">Send Message</button>
             </div>
-            <br>
-            
-            <button class="animated-button" id="contact-button">Send Message</button>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="container">
-        <p>© 2025 Max Day. All Rights Reserved.</p>
-    </div>
-</footer>
+    <footer>
+        <div class="container">
+            <p>© 2025 Max Day. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <!-- Three.js from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>

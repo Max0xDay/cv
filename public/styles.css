@@ -1,12 +1,14 @@
-/* Author: Max Day  */
+/* Author: Max Day*/
 :root {
-    --primary-color: #2a2a72;
-    --secondary-color: #009ffd;
-    --accent-color: #00d4ff;
-    --text-color: #333;
-    --background-color: #f5f5f5;
-    --card-color: rgba(255, 255, 255, 0.85);
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --primary-color: #6366f1;
+    --secondary-color: #3b82f6;
+    --accent-color: #60a5fa;
+    --text-color: #e2e8f0;
+    --background-color: #0f172a;
+    --dark-background: #1e293b;
+    --card-color: rgba(30, 41, 59, 0.9);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --hover-color: #4f46e5;
 }
 
 * {
@@ -57,13 +59,13 @@ header {
 
 .profile-img:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-shadow: 2px 2px 4px var(--shadow-color);
     opacity: 0;
     transform: translateY(30px);
@@ -72,7 +74,7 @@ h1 {
 
 .title {
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--accent-color);
     margin-bottom: 20px;
     opacity: 0;
     transform: translateY(30px);
@@ -91,7 +93,7 @@ h1 {
 
 .contact-info a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--accent-color);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -99,11 +101,11 @@ h1 {
 }
 
 .contact-info a:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 nav {
-    background-color: var(--primary-color);
+    background-color: var(--dark-background);
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -120,7 +122,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 5px;
@@ -141,7 +143,7 @@ section {
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--primary-color);
+    color: var(--text-color);
     position: relative;
     padding-bottom: 15px;
 }
@@ -168,7 +170,7 @@ section {
 }
 
 .card:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card.visible {
@@ -179,12 +181,12 @@ section {
 .card h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .card h4 {
     font-size: 1.2rem;
-    color: var(--secondary-color);
+    color: var(--accent-color);
     margin-bottom: 15px;
 }
 
@@ -286,12 +288,12 @@ section {
     text-align: right;
     font-weight: bold;
     margin-top: 20px;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--dark-background);
+    color: var(--text-color);
     text-align: center;
     padding: 30px 0;
 }
@@ -304,7 +306,7 @@ footer {
 }
 
 .social-links a {
-    color: white;
+    color: var(--text-color);
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
@@ -321,7 +323,7 @@ footer {
 .progress-container {
     width: 100%;
     height: 10px;
-    background-color: #ddd;
+    background-color: #2d3748;
     border-radius: 5px;
     margin-top: 10px;
     overflow: hidden;
@@ -345,7 +347,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 159, 253, 0.4);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
     margin-top: 0px;
     position: relative;
     overflow: hidden;
@@ -353,7 +355,7 @@ footer {
 
 .animated-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 159, 253, 0.6);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.6);
 }
 
 .animated-button::after {
@@ -374,50 +376,14 @@ footer {
     animation: ripple 1s ease-out;
 }
 
-/* These look rly cool */
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.location {
+    font-style: italic;
+    color: #94a3b8;
+    text-align: right;
+    margin-top: 10px;
 }
 
-@keyframes ripple {
-    0% {
-        transform: scale(0, 0);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(20, 20);
-        opacity: 0;
-    }
-}
-
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .title {
-        font-size: 1.2rem;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
-  .pdf-modal {
+.pdf-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -431,7 +397,7 @@ footer {
 
 .pdf-modal-header {
     padding: 15px;
-    background-color: var(--primary-color);
+    background-color: var(--dark-background);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -455,4 +421,46 @@ footer {
     width: 100%;
     height: calc(100% - 70px);
     border: none;
+}
+
+/* These look rly cool */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
 }

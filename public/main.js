@@ -2,6 +2,7 @@
  * Date: 03/04/2025
  *
  */
+
 const initThreeJS = () => {
     const container = document.getElementById('canvas-container');
     const scene = new THREE.Scene();
@@ -17,8 +18,9 @@ const initThreeJS = () => {
     
     const posArray = new Float32Array(particlesCount * 3);
     const colorsArray = new Float32Array(particlesCount * 3);
-    const color1 = new THREE.Color(0x2a2a72); //0x2a2FFF
-    const color2 = new THREE.Color(0x009ffd); 
+    // Updated colors for dark mode
+    const color1 = new THREE.Color(0x6366f1); // Primary color
+    const color2 = new THREE.Color(0x3b82f6); // Secondary color
     
     for (let i = 0; i < particlesCount * 3; i += 3) {
 
@@ -76,7 +78,6 @@ const initThreeJS = () => {
     
     animate();
 };
-
 
 document.addEventListener('DOMContentLoaded', () => {
     initThreeJS();
@@ -228,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //idk how this function rly works excatly and if I change anything about it 
 function openPdfPreview(pdfPath, title) {
 
-    const isMobile = /Android|webOS|iPhone|iPad|/i.test(navigator.userAgent);
+    const isMobile = /Android|webOS|iPhone|iPad/i.test(navigator.userAgent);
     if (!isMobile) {
 
         const modal = document.createElement('div');
@@ -247,7 +248,7 @@ function openPdfPreview(pdfPath, title) {
         const modalContainer = document.createElement('div');
         modalContainer.style.width = '70%'; // make it slighly smaller
         modalContainer.style.height = '80%';
-        modalContainer.style.backgroundColor = 'white';
+        modalContainer.style.backgroundColor = '#1e293b'; // Updated for dark mode
         modalContainer.style.borderRadius = '10px';
         modalContainer.style.overflow = 'hidden';
         modalContainer.style.display = 'flex';
@@ -257,7 +258,7 @@ function openPdfPreview(pdfPath, title) {
         
         const header = document.createElement('div');
         header.style.padding = '15px';
-        header.style.backgroundColor = '#2a2a72';
+        header.style.backgroundColor = '#6366f1'; // Updated for dark mode
         header.style.color = 'white';
         header.style.display = 'flex';
         header.style.justifyContent = 'space-between';
