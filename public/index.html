@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive CV - Max Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .location {
+            font-style: italic;
+            color: #666;
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+
+    <header>
+        <div class="container">
+            <img src="/images/image.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Max Day</h1>
+            <p class="title">Backend Software Developer</p>
+            <div class="contact-info">
+                <a href="mailto:max28.day@gmail.com">max28.day@gmail.com</a>
+                <a href="tel:+0721050898">0721050898</a>
+                <a href="#">South Africa</a>
+            </div>
+            <button class="animated-button" id="download-cv">Download CV</button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="card">
+                <p>I am a third-year Computer Science student at Varsity College. I have multiple years of experience, and I am passionate about backend development and problem-solving.</p>
+                
+                <p>I possess a wide range of programming skills, with particular expertise in Javascript and C. My primary interests lie in developing foundational backend systems. Currently, in my third year of completing a Computer Science degree, I am focusing on C# and the .NET framework for web application development.</p>
+
+                <p>I'm deeply interested in Linux CLI server environments and have been building my own home server network utilizing Ubiquity and Cisco ASA systems. This hands-on experience has strengthened my understanding of network architecture and server management.</p>
+                
+                <p>At work, I've been integrating low-level C code with Node.js systems, bridging the gap between high-performance compiled code and modern JavaScript frameworks to create efficient and scalable applications.</p>
+                
+                <p>I am highly adaptable and composed, dedicating myself to meeting your unique demands to the best of my abilities. With clear instructions, I can ensure the utmost quality in my work. My expertise extends to backend Java/C# applications and database management. I also possess skills in Azure management and the deployment of web applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="card">
+                <span class="date">Jul 2023 - Aug 2023</span>
+                <h3>Software Tester</h3>
+                <h4>Unlogged (YC S22)</h4>
+                <p>Tested and provided feedback on the Unlogged plugin for IntelliJ IDE.</p>
+                <br>
+                <ul>
+                    <li>I was tasked with daily driving the newly created Unlogged plugin in the IntelJ IDE</li>
+                    <li>I wrote feedback on how the plugin performed in QA environments and how it could be improved</li>
+                </ul>
+                <p class="location">California, United States</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="card">
+                <span class="date">2023 - 2025 (expected)</span>
+                <h3>Bachelor of Computer and Information Sciences in Application Development</h3>
+                <h4>Varsity College</h4>
+                <p>Currently in my third year, focusing on C# development and MVC architectural patterns. I have hands-on experience building web applications using the .NET framework, deploying systems through Azure cloud services, and working extensively with both SQL and NoSQL database structures. My coursework has strengthened my knowledge of web development and deployment workflows. In my third year we have begun focusing on Android app development .</p>
+                <p><strong>Semester Marks:</strong></p>
+                <div class="semester-buttons">
+                    <button class="animated-button" id="semester-1">Semester 1</button>
+                    <button class="animated-button" id="semester-2">Semester 2</button>
+                    <button class="animated-button" id="semester-3">Semester 3</button>
+                    <button class="animated-button" id="semester-4">Semester 4</button>
+                    <button class="animated-button" id="semester-5">Semester 5</button>
+                    <button class="animated-button" id="semester-6">Semester 6</button>
+                </div>
+            </div>
+            <br>
+            
+            <div class="card">
+                <span class="date">2018 - 2022</span>
+                <h3>High School Diploma</h3>
+                <h4>St John's College, Houghton, South Africa</h4>
+                <p>Completed my high school education with a focus on science and mathematics. Achieved excellent results in the IEB curriculum. During this time I took IT and was taught the structures of Object Oriented Programming and the groundwork to be able to pick up many of the langauges I use currently</p>
+                <p><strong>Final IEB Marks:</strong></p>
+                <button class="animated-button" id="download-ieb-marks">Matric Certificate</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            
+            <div class="card">
+                <h3>Technical Skills</h3>
+                
+                <h4>Backend Development</h4>
+                <div class="progress-container">
+                    <div class="progress-bar" data-width="90"></div>
+                </div>
+                <div class="skills">
+                    <span class="skill">C# .NET</span>
+                    <span class="skill">C# MVC</span>
+                    <span class="skill">Node.js</span>
+                    <span class="skill">Java</span>
+                    <span class="skill">TypeScript</span>
+                    <span class="skill">Low-level C</span>
+                    <span class="skill">OOP</span>
+                </div>
+                <br>
+                
+                <h4>Backend Architecture</h4>
+                <div class="progress-container">
+                    <div class="progress-bar" data-width="85"></div>
+                </div>
+                <div class="skills">
+                    <span class="skill">Backend Architecture Creation</span>
+                    <span class="skill">RESTful API Design</span>
+                    <span class="skill">Microservices</span>
+                    <span class="skill">Application Data Flow</span>
+                    <span class="skill">Backend Algorithm Design</span>
+                </div>
+                <br>
+                
+                <h4>Tools & Technologies</h4>
+                <div class="progress-container">
+                    <div class="progress-bar" data-width="80"></div>
+                </div>
+                <div class="skills">
+                    <span class="skill">Azure</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">CI/CD Pipelines</span>
+                    <span class="skill">GitHub Actions</span>
+                    <span class="skill">SQL & NoSQL Databases</span>
+                    <span class="skill">MongoDB</span>
+                    <span class="skill">Entity Framework</span>
+                    <span class="skill">Express.js</span>
+                    <span class="skill">ASP.NET</span>
+                    <span class="skill">Web Application Deployment</span>
+                </div>
+            </div>
+            <br>
+            
+            <div class="card">
+                <h3>Soft Skills</h3>
+                <div class="skills">
+                    <span class="skill">Attentive and Open to Feedback</span>
+                    <span class="skill">Client-focused Development Approach</span>
+                    <span class="skill">Adaptable</span>
+                    <span class="skill">Problem Solving</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="card">
+                <div class="project">
+                    <img src="https://via.placeholder.com/800x450" alt="Project 1">
+                    <div>
+                        <h3>Project 1</h3>
+                        <p>Project description goes here.</p>
+                        <br>
+                        <div class="skills">
+                            <span class="skill">C#</span>
+                            <span class="skill">.NET</span>
+                            <span class="skill">Backend</span>
+                        </div>
+                        <br>
+                        <div class="project-links">
+                            <a href="#" target="_blank">View Demo</a>
+                            <a href="https://github.com/Max0xDay" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+            <div class="card">
+                <div class="project">
+                    <img src="https://via.placeholder.com/800x450" alt="Project 2">
+                    <div>
+                        <h3>Project 2</h3>
+                        <p>Project description goes here.</p>
+                        <br>
+                        <div class="skills">
+                            <span class="skill">Java</span>
+                            <span class="skill">Backend</span>
+                            <span class="skill">Architecture</span>
+                        </div>
+                        <br>
+                        <div class="project-links">
+                            <a href="#" target="_blank">View Demo</a>
+                            <a href="https://github.com/Max0xDay" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimonials</h2>
+            
+            <div class="card">
+                <div class="testimonial">
+                    <p>Soon</p>
+                    <p class="author">— Nsoon, company </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        
+        <div class="card">
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to contact me using your preferred method.</p>
+            <br>
+            
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:max28.day@gmail.com">max28.day@gmail.com</a></p>
+            <p>Phone: <a href="tel:0721050898">0721050898</a></p>
+            <br>
+            
+            <h3>Social Media</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/Max-Day/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 32px; height: 32px;">
+                </a>
+                <a href="https://github.com/Max0xDay" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 32px; height: 32px;">
+                </a>
+                <a href="https://upwork.com/Max-Day/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Upwork" style="width: 32px; height: 32px;">
+                </a>
+            </div>
+            <br>
+            
+            <button class="animated-button" id="contact-button">Send Message</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2025 Max Day. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <!-- Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Main JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
