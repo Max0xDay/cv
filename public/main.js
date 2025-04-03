@@ -165,8 +165,48 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     document.getElementById('download-cv').addEventListener('click', () => {
-        alert('CV download functionality would go here in a real implementation.');
+        generatePDF();
     });
+    
+    function generatePDF() {
+        
+        const canvasContainer = document.getElementById('canvas-container');
+        const originalCanvasDisplay = canvasContainer.style.display;
+        canvasContainer.style.display = 'none';
+        
+        if (typeof html2pdf === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+            script.onload = function() {
+                
+                const options = {
+                    margin: 10,
+                    filename: 'Max_Day_CV.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+                
+                html2pdf().set(options).from(document.body).save().then(() => {
+                    canvasContainer.style.display = originalCanvasDisplay;
+                });
+            };
+            document.head.appendChild(script);
+        } else {
+            
+            const options = {
+                margin: 10,
+                filename: 'Max_Day_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            html2pdf().set(options).from(document.body).save().then(() => {
+                canvasContainer.style.display = originalCanvasDisplay;
+            });
+        }
+    }
     
     const serverUrl = window.location.origin; // i needed this for the downlaod links dont question it 
 
@@ -218,9 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openPdfPreview(`${serverUrl}/pdfs/IEB_Marks.pdf`, 'IEB Marks');
     });
     
-    document.getElementById('contact-button').addEventListener('click', () => {
-        alert('Contact form would appear here in a real implementation.');
-    });
+    
 
     revealCards();
     initProgressBars();
