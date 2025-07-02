@@ -18,7 +18,6 @@ const initThreeJS = () => {
     
     const posArray = new Float32Array(particlesCount * 3);
     const colorsArray = new Float32Array(particlesCount * 3);
-    // Updated colors for dark mode
     const color1 = new THREE.Color(0x6366f1); // Primary color
     const color2 = new THREE.Color(0x3b82f6); // Secondary color
     
@@ -137,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
-    // Handle scroll events
     window.addEventListener('scroll', () => {
         revealCards();
         initProgressBars();

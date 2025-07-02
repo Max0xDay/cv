@@ -1,0 +1,44 @@
+{
+  "name": "max-day-cv-deno",
+  "version": "0.2.2",
+  "description": "Deno hosted Interactive CV/Portfolio",
+  "author": "Max Day",
+  "license": "MIT",
+  "keywords": [
+    "cv",
+    "portfolio",
+    "resume",
+    "deno"
+  ],
+  "tasks": {
+    "start": "deno run --allow-net --allow-read --allow-env server.ts",
+    "dev": "deno run --allow-net --allow-read --allow-env --watch server.ts"
+  },
+  "imports": {
+    "std/http/": "https://deno.land/std@0.224.0/http/",
+    "std/path/": "https://deno.land/std@0.224.0/path/",
+    "std/media-types/": "https://deno.land/std@0.224.0/media_types/"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": false,
+    "proseWrap": "preserve",
+    "include": ["src/", "server.ts"],
+    "exclude": ["node_modules/", "dist/"]
+  },
+  "lint": {
+    "include": ["src/", "server.ts"],
+    "exclude": ["node_modules/", "dist/"],
+    "rules": {
+      "tags": ["recommended"]
+    }
+  }
+}
