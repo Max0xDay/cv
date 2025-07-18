@@ -1,12 +1,6 @@
-# CV Website - Deno Version
+# CV Website
 
 A cool interactive CV in Deno.
-
-## Author
-Max Day
-
-## Version
-0.2.3
 
 ## Description
 This is a Deno version of the CV website, converted from the original Node.js implementation. It serves static files including HTML, CSS, JavaScript, PDFs, and images. Feel free to clone and modify for yourself.
@@ -72,13 +66,5 @@ cv-deno/
 ├── pdfs/                  # PDF files
 └── images/                # Image files
 ```
-
-## Permissions
-
-The application requires the following Deno permissions:
-- `--allow-net`: To serve HTTP requests
-- `--allow-read`: To read static files
-- `--allow-env`: To read environment variables (PORT, DENO_ENV)
-
 ## License
 MIT
