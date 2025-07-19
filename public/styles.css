@@ -398,6 +398,22 @@ footer {
     margin-top: 10px;
 }
 
+.card ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-size: 0.95em;
+}
+
+.position-type {
+    font-size: 0.8em; 
+    color: var(--accent-color);
+}
+
 .pdf-modal {
     position: fixed;
     top: 0;
