@@ -161,54 +161,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-
-    document.getElementById('download-cv').addEventListener('click', () => {
-        generatePDF();
+     const serverUrl = window.location.origin; // i needed this for the downlaod links dont question it 
+   
+     document.getElementById('download-cv').addEventListener('click', () => {
+        const serverUrl = window.location.origin;
+        openPdfPreview(`${serverUrl}/pdfs/Max_Day_CV.pdf`, 'Max Day CV');
     });
     
-    function generatePDF() {
-        
-        const canvasContainer = document.getElementById('canvas-container');
-        const originalCanvasDisplay = canvasContainer.style.display;
-        canvasContainer.style.display = 'none';
-        
-        if (typeof html2pdf === 'undefined') {
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
-            script.onload = function() {
-                
-                const options = {
-                    margin: 10,
-                    filename: 'Max_Day_CV.pdf',
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2 },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-                };
-                
-                html2pdf().set(options).from(document.body).save().then(() => {
-                    canvasContainer.style.display = originalCanvasDisplay;
-                });
-            };
-            document.head.appendChild(script);
-        } else {
-            
-            const options = {
-                margin: 10,
-                filename: 'Max_Day_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
-            
-            html2pdf().set(options).from(document.body).save().then(() => {
-                canvasContainer.style.display = originalCanvasDisplay;
-            });
-        }
-    }
     
-    const serverUrl = window.location.origin; // i needed this for the downlaod links dont question it 
-
-
     const semester1Button = document.getElementById('semester-1');
     if (semester1Button) {
         semester1Button.addEventListener('click', () => {
